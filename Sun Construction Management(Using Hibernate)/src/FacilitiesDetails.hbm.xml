@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="FacilitiesDetails" table="facilities">
+    <id name="facilitiesId" column="FACILITIES_ID">
+      <generator class="assigned"/>
+    </id>
+    <property name="facilitiesName" column="FACILITIES_NAME" type="java.lang.String"/>
+    <property name="monthlycharge" column="MONTHLY_CHARGE" type="integer"/>
+  </class>
+</hibernate-mapping>

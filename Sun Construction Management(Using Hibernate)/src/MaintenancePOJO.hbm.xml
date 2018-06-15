@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="MaintenancePOJO" table="MAINTENANCEDETAILS">
+    <id name="mId" column="M_ID">
+      <generator class="native"/>
+    </id>
+    <property name="amount" column="AMOUNT" type="java.lang.Float"/>
+    <property name="paymentstatus" column="PAYMENT_STATUS" type="boolean"/>
+    <property name="paymentdate" column="PAYMENT_DATE" type="java.sql.Date"/>
+    <property name="paymentmonth" column="PAYMENT_MONTH" type="java.lang.String"/>
+    <!-- <one-to-one name="owner" class="Owner" /> -->
+    <many-to-one name="owner" class="Owner">
+    <column name="OWNER_ID"></column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+ <class name="Facilities" table="faciliti_used">
+    <id name="id" column="ID">
+      <generator class="native"/>
+    </id>
+    <property name="facilitiesname" column="FACILITIES_NAME" type="java.lang.String"/>
+    <property name="startdate" column="START_DATE" type="java.sql.Date"/>
+    <property name="enddate" column="END_DATE" type="java.sql.Date"/>
+    <property name="paymentstatus" column="PAYMENT_STATUS" type="boolean"/>
+    <many-to-one name="owner" class="Owner">
+    <column name="OWNER_ID" ></column>
+    </many-to-one>
+  </class>
+</hibernate-mapping>
